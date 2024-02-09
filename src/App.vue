@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/MyPage">My Page</router-link> |
+    <router-link to="/ErrorPage">Erreur 404</router-link>
   </nav>
   <router-view/>
 </template>
