@@ -6,8 +6,8 @@
 
 export default {
 
- name:'ErrorPage',
- components: { }
+name:'ErrorPage',
+components: { }
 
 }
 </script>
