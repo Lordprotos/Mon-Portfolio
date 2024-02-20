@@ -1,19 +1,20 @@
 <template>
 <div id="app">
-  <header>
-    <img src="../src/assets/Images/House.svg" alt="House">
-    <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/MyPage">My Page</router-link> |
+  <header id="header">
+    
+    <nav id="nav">
+        <router-link to="/"><img id="house" src="../src/assets/Images/House.svg" alt="House">Home</router-link> |
+        <router-link to="/MyCV">My Page</router-link> |
         <router-link to="/ErrorPage">Erreur 404</router-link>
       </nav>
+      <h1>Mon Portfolio</h1>
   </header>
   <main>
     <router-view/>
   </main>
   <footer>
       <section id="socialLink">
-        <!--Social links with link to account and acutalisation date -->
+        <!--Social links with link to account and actualisation date -->
         <a href="https://github.com/Lordprotos"><img id="logoGithub" src="../src/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
         <a href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="../src/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
         <a href="https://twitter.com/protos241"><img id="logoTwitter" src="../src/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
@@ -24,12 +25,26 @@
 </template>
 
 <style lang="scss">
+
 #app {
   background: linear-gradient(to left, rgb(0, 25, 248), rgb(126, 24, 129), rgb(116, 116, 56), rgb(167, 58, 58), rgb(116, 116, 56), rgb(126, 24, 129), rgb(0, 25, 248));
   animation: gradientAnimation 10s infinite alternate; 
   background-size: 600% 600%;
-  font-size: medium;
-  text-align: center;
+  color: white;
+}
+
+div {
+  padding: 2em;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding: 3% 7% 3% 7%;
 }
 
 @keyframes gradientAnimation {
@@ -42,18 +57,21 @@
 }
 
 #app main {
-  background: none;
+  font-size: 120%;
 }
 
 nav {
   a {
     font-weight: bold;
-    color: #ce66dbaf;
+    color: #1aace6af;
 
     &.router-link-exact-active {
       color: #7de2b4;
     }
   }
+  font-size: 180%;
+  border: 3px solid black;
+  padding: 5px;
 }
 
 #socialLink {
@@ -86,6 +104,18 @@ nav {
 
 #logoPortfolio {
     width: 100px;
-    height: 100px 
+    height: 100px; 
 }
+
+#house {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    
+  
+}
+
+
+
+
 </style>

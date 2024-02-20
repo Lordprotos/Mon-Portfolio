@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import MyPage from '../views/MyPage.vue'
+import MyCV from '../views/MyCV.vue'
 import ErrorPage from '../views/ErrorPage.vue'
 
 const routes = [
@@ -10,9 +10,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/MyPage',
-    name: 'MyPage',
-    component: MyPage
+    path: '/MyCV',
+    name: 'MyCV',
+    component: MyCV
   },
   {
     path: '/ErrorPage',
