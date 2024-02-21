@@ -15,10 +15,10 @@
   <footer>
       <section id="socialLink">
         <!--Social links with link to account and actualisation date -->
-        <a href="https://github.com/Lordprotos"><img id="logoGithub" src="../src/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
-        <a href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="../src/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
-        <a href="https://twitter.com/protos241"><img id="logoTwitter" src="../src/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
-        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-12">12 février 2024</time></strong></p>
+        <a style="color: rgb(255, 255, 255);" href="https://github.com/Lordprotos"><img id="logoGithub" src="../src/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
+        <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="../src/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
+        <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="../src/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
+        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-20">20 février 2024</time></strong></p>
       </section>
     </footer>
 </div>
@@ -35,6 +35,11 @@
 
 div {
   padding: 2em;
+}
+
+footer {
+  margin: 3em;
+  
 }
 
 #header {
@@ -111,11 +116,6 @@ nav {
     display: flex;
     width: 100px;
     height: 100px;
-    
-  
 }
-
-
-
 
 </style>

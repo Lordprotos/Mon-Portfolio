@@ -3,10 +3,13 @@
     <p>
       • Vos créations avec à chaque fois une image et un titre. Une modal s'ouvrira avec plus<br/>
       de photos et détails au clic. La disposition est libre.<br/>
-      • Un formulaire de contact (nom/prénom, objet et message) qui s'envoie à l'adresse email définie en variable d'environnement.
     </p>
     <h2>Joseph LEVEQUE</h2>
     <p>Je me présente, ....................................</p>
+    <div>
+      <button @click="openModal">Acceder au Project CV</button>
+      <ModalCV ref="modal" />
+  </div>
   </div>
   <div id="form">
       <form action="/send-email" method="post">
@@ -36,21 +39,32 @@
 
 <script>
 
+import ModalCV from './ModalCV.vue'
+
 export default {
   name: 'HomeView',
-  components: { }
-}
+  components: {
+    ModalCV 
+   },
+   methods: {
+    openModal() {
+      this.$refs.modal.open();
+    }
+   }
+};
+
+
 </script>
 
 <style lang="scss">
 
 .home {
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(0, 0, 0, 0.541);
   padding: 3em 6em 1em 6em;
 }
 
 #form {
-  background-color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(0, 0, 0, 0.541);
   padding: 1em 6em 3em 6em;
 }
 
@@ -72,7 +86,6 @@ form li + li {
 }
 
 label {
-  /* Taille et alignement uniformes */
   display: inline-block;
   width: 90px;
   text-align: center;
@@ -86,26 +99,18 @@ input, textarea {
 }
 
 textarea {
-  /* On aligne les textes sur plusieurs lignes avec leur
-     libellé. */
   vertical-align: top;
-
-  /* On fournit un peut d'espace pour saisir du texte. */
   height: 5em;
-
-  /* On permet de redimensionner verticalement. */
   resize: vertical;
 }
 
 .button {
-  /* On aligne les boutons avec les champs texte. */
-  padding-left: 90px; /* La même taille que les libellés */
+  padding-left: 90px;
 }
 
 button {
-  /* Une marge supplémentaire représentant approximativement
-     le même espace qu'entre les libellés et les champs. */
-  margin-left: 0.5em;
+  margin-left: 19em;
+  margin-top: 5px;
 }
 
 </style>
