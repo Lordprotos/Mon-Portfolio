@@ -7,7 +7,10 @@
     <h2>Joseph LEVEQUE</h2>
     <p>Je me présente, ....................................</p>
     <div>
-      <button @click="openModal">Acceder au Project CV</button>
+      <button @click="openModal">
+        <img class="imagesitecv" src="../assets/Images/imagesiteCV.png" alt="Image site CV">
+        <h2>Mon site CV</h2>
+      </button>
       <ModalCV ref="modal" />
   </div>
   </div>
@@ -111,6 +114,11 @@ textarea {
 button {
   margin-left: 19em;
   margin-top: 5px;
+}
+
+.imagesitecv {
+  width: 400px;
+  height: 400px;
 }
 
 </style>

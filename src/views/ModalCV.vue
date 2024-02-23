@@ -1,16 +1,14 @@
 <template>
-  <div class="modal" v-if="isVisible">
-    <div class="modal-coontent">
-      <span class="close" @click="close">&times;</span>
+  <div class="modal" v-if="isVisible" @click.self="closeModal">
+    <div class="modal-content" @click.stop>
+      <span class="close" @click="close">&#10005;</span>
         <ul>
           <h1>Mon CV</h1>
           <p>Crée le 10/11/2023</p>
           <p>HTML5 / CSS </p>
           <p>lien pdf du site</p>
           <p>le repository GitHub</p>
-          • Les technologies utilisées.
-          • La modal se fermera lorsqu'on clique sur le bouton de fermeture ou en dehors. Elle
-          devra rester fixe sur la page même si on scrolle
+          <a href="../assets/Images/sitecv.png"><img class="sitecv" src="../assets/Images/sitecv.png" alt="sitecv"></a>
       </ul>
     </div>
   </div>
@@ -31,10 +29,50 @@ export default {
       close() {
         this.isVisible= false;
       },
+      closeModal() {
+      this.close();
+    }
     }
 };
 </script>
 
 <style>
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 60vmin; 
+  height: 40vmin; 
+  background-color: rgba(0, 0, 0, 0.603);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc; 
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: black;
+}
+
+.sitecv {
+  width: 5em;
+  height: 5em;
+  display: inline-flex;
+}
+
 </style>
+

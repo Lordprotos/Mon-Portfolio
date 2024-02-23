@@ -3,9 +3,7 @@
   <header id="header">
     
     <nav id="nav">
-        <router-link to="/"><img id="house" src="../src/assets/Images/House.svg" alt="House">Home</router-link> |
-        <router-link to="/MyCV">My Page</router-link> |
-        <router-link to="/ErrorPage">Erreur 404</router-link>
+        <router-link to="/"><img id="house" src="../src/assets/Images/House.svg" alt="House">Home</router-link>
       </nav>
       <h1>Mon Portfolio</h1>
   </header>
