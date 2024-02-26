@@ -6,10 +6,11 @@
           <h1>Mon CV</h1>
           <p>Crée le 10/11/2023</p>
           <p>HTML5 / CSS </p>
-          <p>lien pdf du site</p>
           <p>le repository GitHub</p>
-          <a href="../assets/Images/sitecv.png"><img class="sitecv" src="../assets/Images/sitecv.png" alt="sitecv"></a>
-      </ul>
+        </ul>
+        <div class="sitecv-link">
+          <a href="../assets/Images/sitecv.png"><img class="imagesite" src="../assets/Images/sitecv.png" alt="sitecv"></a>
+        </div>
     </div>
   </div>
 </template>
@@ -51,8 +52,10 @@ export default {
 }
 
 .modal-content {
-  width: 60vmin; 
-  height: 40vmin; 
+  display: flex;
+  justify-content: space-around;
+  width: 60vw; 
+  height: auto; 
   background-color: rgba(0, 0, 0, 0.603);
   padding: 20px;
   border-radius: 10px;
@@ -68,10 +71,9 @@ export default {
   color: black;
 }
 
-.sitecv {
-  width: 5em;
-  height: 5em;
-  display: inline-flex;
+.imagesite {
+  width: 300px;
+  height: 300px;
 }
 
 </style>

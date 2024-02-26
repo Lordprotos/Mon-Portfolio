@@ -1,11 +1,10 @@
 <template>
 <div id="app">
   <header id="header">
-    
     <nav id="nav">
-        <router-link to="/"><img id="house" src="../src/assets/Images/House.svg" alt="House">Home</router-link>
-      </nav>
-      <h1>Mon Portfolio</h1>
+        <router-link to="/" @click="scrollToTop"><img id="house" src="../src/assets/Images/House.svg" alt="House"><span>Home</span></router-link>
+    </nav>
+    <h1 class="titre1">Mon Portfolio</h1>
   </header>
   <main>
     <router-view/>
@@ -16,11 +15,22 @@
         <a style="color: rgb(255, 255, 255);" href="https://github.com/Lordprotos"><img id="logoGithub" src="../src/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
         <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="../src/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
         <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="../src/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
-        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-20">20 février 2024</time></strong></p>
+        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-26">26 février 2024</time></strong></p>
       </section>
     </footer>
 </div>
 </template>
+
+<script>
+
+export default {
+  methods: {
+    scrollToTop() {
+      window.scrollto({top:0, behavior: 'smooth' });
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 
@@ -44,10 +54,8 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 3%;
-  padding-left: 7%;
-  padding-right: 7%;
-  padding: 3% 7% 3% 7%;
+  padding: 10px 7% 3% 7%;
+  margin: 10px;
 }
 
 @keyframes gradientAnimation {
@@ -63,19 +71,46 @@ footer {
   font-size: 120%;
 }
 
-nav {
-  a {
-    font-weight: bold;
-    color: #1aace6af;
 
-    &.router-link-exact-active {
-      color: #7de2b4;
-    }
-  }
+
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
   font-size: 180%;
   border: 3px solid black;
+  border-radius: 15px;
   padding: 5px;
+  
 }
+
+nav a {
+  font-weight: bold;
+  color: #1aace6af;
+}
+
+nav a.router-link-exact-active {
+  color: #111111;
+  text-decoration: none;
+}
+
+nav router-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+nav span {
+  margin-left: 13px;
+}
+
+.titre1 {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  padding: 5px;
+  margin-left: 40%;
+}
+
 
 #socialLink {
     display: flex;
@@ -111,9 +146,9 @@ nav {
 }
 
 #house {
-    display: flex;
-    width: 100px;
-    height: 100px;
+  display: flex;
+  width: 100px;
+  height: 100px;
 }
 
 </style>

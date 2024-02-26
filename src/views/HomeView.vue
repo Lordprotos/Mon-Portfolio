@@ -6,13 +6,15 @@
     </p>
     <h2>Joseph LEVEQUE</h2>
     <p>Je me présente, ....................................</p>
-    <div>
-      <button @click="openModal">
-        <img class="imagesitecv" src="../assets/Images/imagesiteCV.png" alt="Image site CV">
-        <h2>Mon site CV</h2>
+    <div class="blockmodalcv">
+      <button class="modalcv" @click="openModal">
+        <h2>Mon CV</h2>
+        <div class="image-overlay">
+          <img class="imagesitecv" src="../assets/Images/sitecv.png"  alt="Image site CV">
+        </div>
       </button>
       <ModalCV ref="modal" />
-  </div>
+    </div>
   </div>
   <div id="form">
       <form action="/send-email" method="post">
@@ -34,7 +36,10 @@
             <textarea name="message" id="msg" cols="30" rows="10"></textarea>
           </li>
         </ul>
-        <button id="button" type="submit">Envoyer le message</button>
+        <div class="button-container">
+          <button type="submit">Envoyer le message</button>
+        </div>
+        
       </form>
   </div>
   
@@ -48,12 +53,12 @@ export default {
   name: 'HomeView',
   components: {
     ModalCV 
-   },
-   methods: {
+},
+methods: {
     openModal() {
       this.$refs.modal.open();
     }
-   }
+}
 };
 
 
@@ -64,6 +69,9 @@ export default {
 .home {
   background-color: rgba(0, 0, 0, 0.541);
   padding: 3em 6em 1em 6em;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 #form {
@@ -73,7 +81,7 @@ export default {
 
 form {
   width: 400px;
-  padding: 1em;
+  padding: 50px;
   border: 1px solid #ccc;
   border-radius: 1em;
 }
@@ -94,6 +102,10 @@ label {
   text-align: center;
 }
 
+input {
+  caret-color: red;
+}
+
 input, textarea {
   font: 1em sans-serif;
   width: 300px;
@@ -107,18 +119,36 @@ textarea {
   resize: vertical;
 }
 
-.button {
-  padding-left: 90px;
+.button-container {
+  text-align: right;
+  padding: 10px;
 }
 
-button {
-  margin-left: 19em;
+.modalcv {
+  margin-left: 0;
   margin-top: 5px;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid white;
+  border-radius: 15%;
+}
+
+.blockmodalcv {
+  text-align: left;
+}
+
+.blockmodalcv h2 {
+  color: white;
 }
 
 .imagesitecv {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid white;
 }
 
 </style>
