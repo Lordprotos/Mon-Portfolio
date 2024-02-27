@@ -1,4 +1,5 @@
 <template>
+  <main>
   <div class="home">
     <p>
       • Vos créations avec à chaque fois une image et un titre. Une modal s'ouvrira avec plus<br/>
@@ -37,11 +38,21 @@
           </li>
         </ul>
         <div class="button-container">
-          <button type="submit">Envoyer le message</button>
+          <button class="buttonform" type="submit">Envoyer le message</button>
         </div>
-        
       </form>
-  </div>
+    </div>
+    </main>
+      <footer>
+      <section id="socialLink">
+        <!--Social links with link to account and actualisation date -->
+        <a style="color: rgb(255, 255, 255);" href="https://github.com/Lordprotos"><img id="logoGithub" src="@/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
+        <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="@/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
+        <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="@/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
+        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-26">26 février 2024</time></strong></p>
+      </section>
+    </footer>
+  
   
 </template>
 
@@ -66,12 +77,18 @@ methods: {
 
 <style lang="scss">
 
+div .home {
+  padding: 2em;
+}
+div .blockmodalcv {
+  padding: 1em;
+}
+
 .home {
   background-color: rgba(0, 0, 0, 0.541);
   padding: 3em 6em 1em 6em;
   display: flex;
   flex-direction: column;
-  
 }
 
 #form {
@@ -82,6 +99,7 @@ methods: {
 form {
   width: 400px;
   padding: 50px;
+  margin-left: -3em;
   border: 1px solid #ccc;
   border-radius: 1em;
 }
@@ -99,7 +117,8 @@ form li + li {
 label {
   display: inline-block;
   width: 90px;
-  text-align: center;
+  text-align: right;
+  margin-right: 10px;
 }
 
 input {
@@ -124,10 +143,16 @@ textarea {
   padding: 10px;
 }
 
+.buttonform:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
 .modalcv {
   margin-left: 0;
   margin-top: 5px;
-  padding: 3px;
+  padding: 2em;
   background: rgba(0, 0, 0, 0.5);
   border: 5px solid white;
   border-radius: 15%;

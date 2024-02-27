@@ -4,29 +4,26 @@
     <nav id="nav">
         <router-link to="/" @click="scrollToTop"><img id="house" src="../src/assets/Images/House.svg" alt="House"><span>Home</span></router-link>
     </nav>
-    <h1 class="titre1">Mon Portfolio</h1>
+    <div class="title_nav">
+      <h1 class="titre1">Mon Portfolio</h1>
+      <nav class="nav2">
+        <p id="item">A propos de moi </p>
+        <p id="item">Mes projets </p>
+        <p id="item">Me contacter</p>
+      </nav>
+    </div>
   </header>
   <main>
     <router-view/>
   </main>
-  <footer>
-      <section id="socialLink">
-        <!--Social links with link to account and actualisation date -->
-        <a style="color: rgb(255, 255, 255);" href="https://github.com/Lordprotos"><img id="logoGithub" src="../src/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
-        <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="../src/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
-        <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="../src/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
-        <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-26">26 février 2024</time></strong></p>
-      </section>
-    </footer>
 </div>
 </template>
 
 <script>
-
 export default {
   methods: {
     scrollToTop() {
-      window.scrollto({top:0, behavior: 'smooth' });
+      window.scrollTo({top:0, behavior: 'smooth' });
     }
   }
 }
@@ -35,25 +32,22 @@ export default {
 <style lang="scss">
 
 #app {
-  background: linear-gradient(to left, rgb(0, 25, 248), rgb(126, 24, 129), rgb(116, 116, 56), rgb(167, 58, 58), rgb(116, 116, 56), rgb(126, 24, 129), rgb(0, 25, 248));
-  animation: gradientAnimation 10s infinite alternate; 
+  background: linear-gradient(to left, rgb(54, 64, 153), rgb(46, 100, 172), rgb(167, 58, 58),  rgb(46, 100, 172), rgb(54, 64, 153));
+  animation: gradientAnimation 30s infinite alternate; 
   background-size: 600% 600%;
   color: white;
 }
 
-div {
+div #app{
   padding: 2em;
 }
 
 footer {
   margin: 3em;
-  
+
 }
 
 #header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 10px 7% 3% 7%;
   margin: 10px;
 }
@@ -68,12 +62,32 @@ footer {
 }
 
 #app main {
-  font-size: 120%;
+  font-size: 110%;
+}
+
+.title_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  height: 9em;
+}
+
+.title_nav p {
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.nav2 {
+  display: flex;
+  justify-items: flex-start;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  padding: 1em;
 }
 
 
-
-nav {
+#nav {
   position: fixed;
   display: flex;
   align-items: center;
@@ -81,26 +95,28 @@ nav {
   border: 3px solid black;
   border-radius: 15px;
   padding: 5px;
+  top: 50px;
+  left: 40px;
   
 }
 
-nav a {
+#nav a {
   font-weight: bold;
   color: #1aace6af;
 }
 
-nav a.router-link-exact-active {
+#nav a.router-link-exact-active {
   color: #111111;
   text-decoration: none;
 }
 
-nav router-link {
+#nav router-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-nav span {
+#nav span {
   margin-left: 13px;
 }
 
@@ -108,7 +124,7 @@ nav span {
   border: 3px solid rgb(255, 255, 255);
   border-radius: 15px;
   padding: 5px;
-  margin-left: 40%;
+  width: 193px;
 }
 
 

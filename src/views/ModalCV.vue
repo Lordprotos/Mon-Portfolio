@@ -9,7 +9,7 @@
           <p>le repository GitHub</p>
         </ul>
         <div class="sitecv-link">
-          <a href="../assets/Images/sitecv.png"><img class="imagesite" src="../assets/Images/sitecv.png" alt="sitecv"></a>
+          <a :href="imageURL" target="_blank"><img class="imagesite" src="imagePath" alt="sitecv"></a>
         </div>
     </div>
   </div>
@@ -17,27 +17,33 @@
 
 <script>
 export default {
-    name: 'ModalCV',
-    data() {
-      return{
-        isVisible: false
-      };
+  name: 'ModalCV',
+  data() {
+    return {
+      isVisible: false,
+      imagePath: "../assets/Images/sitecv.png",
+      imageURL: "../assets/Images/sitecv_large.png"
+    };
+  },
+  methods: {
+    open() {
+      this.isVisible = true;
     },
-    methods: {
-      open() {
-        this.isVisible= true;
-      },
-      close() {
-        this.isVisible= false;
-      },
-      closeModal() {
+    close() {
+      this.isVisible = false;
+    },
+    closeModal() {
       this.close();
     }
-    }
+  }
 };
 </script>
 
 <style>
+
+div .modal {
+  padding: 2em;
+}
 
 .modal {
   position: fixed;
