@@ -7,9 +7,9 @@
     <div class="title_nav">
       <h1 class="titre1">Mon Portfolio</h1>
       <nav class="nav2">
-        <p id="item">A propos de moi </p>
-        <p id="item">Mes projets </p>
-        <p id="item">Me contacter</p>
+        <p @click="scrollToSection('presentation')">Présentation</p>
+        <p @click="scrollToSection('project')">Mes projets </p>
+        <p @click="scrollToSection('contact')">Contact</p>
       </nav>
     </div>
   </header>
@@ -20,10 +20,18 @@
 </template>
 
 <script>
+
 export default {
+
   methods: {
     scrollToTop() {
       window.scrollTo({top:0, behavior: 'smooth' });
+    },
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 }
@@ -86,6 +94,17 @@ footer {
   padding: 1em;
 }
 
+.nav2 p {
+  text-decoration: underline;
+  max-height: max-content;
+  max-width: max-content;
+  cursor: pointer;
+}
+
+.nav2 p:hover {
+  color: rgb(66, 66, 233);
+}
+
 
 #nav {
   position: fixed;
@@ -135,6 +154,12 @@ footer {
     margin-left: 30px;
     gap: 20px;
 }
+
+
+#socialLink:hover {
+  color: rgb(66, 66, 233);
+}
+
 
 #logoGithub {
     width: 50px;

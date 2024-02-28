@@ -9,22 +9,33 @@
           <p>le repository GitHub</p>
         </ul>
         <div class="sitecv-link">
-          <a :href="imageURL" target="_blank"><img class="imagesite" src="imagePath" alt="sitecv"></a>
+          <a :href="imageURL" target="_blank"><img class="imagesite" :src="sitecvImage" alt="sitecv"></a>
         </div>
     </div>
   </div>
 </template>
 
 <script>
+import sitecvImage from "@/assets/Images/sitecv.png";
+
+import sitecvLargeImage from "@/assets/Images/sitecv_large.png";
+
 export default {
   name: 'ModalCV',
-  data() {
-    return {
-      isVisible: false,
-      imagePath: "../assets/Images/sitecv.png",
-      imageURL: "../assets/Images/sitecv_large.png"
-    };
-  },
+
+data() {
+
+  return {
+
+    isVisible: false,
+
+    sitecvImage: sitecvImage,
+
+    imageURL: sitecvLargeImage 
+
+  };
+
+},
   methods: {
     open() {
       this.isVisible = true;

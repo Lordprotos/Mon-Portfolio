@@ -1,23 +1,28 @@
 <template>
   <main>
   <div class="home">
-    <p>
-      • Vos créations avec à chaque fois une image et un titre. Une modal s'ouvrira avec plus<br/>
-      de photos et détails au clic. La disposition est libre.<br/>
-    </p>
-    <h2>Joseph LEVEQUE</h2>
+    <div class="présentation">
+      <p>
+        • Vos créations avec à chaque fois une image et un titre. Une modal s'ouvrira avec plus<br/>
+        de photos et détails au clic. La disposition est libre.<br/>
+      </p>
+      <h2 id="presentation">Présentation</h2>
+      <h3>Joseph LEVEQUE</h3>
     <p>Je me présente, ....................................</p>
+    </div>
     <div class="blockmodalcv">
+      <h2 id="project">Mes projets</h2>
       <button class="modalcv" @click="openModal">
         <h2>Mon CV</h2>
         <div class="image-overlay">
           <img class="imagesitecv" src="../assets/Images/sitecv.png"  alt="Image site CV">
         </div>
       </button>
-      <ModalCV ref="modal" />
+      <ModalCV ref="modal"/>
     </div>
   </div>
   <div id="form">
+    <h2 id="contact">Contact</h2>
       <form action="/send-email" method="post">
         <ul>
           <li>
@@ -69,7 +74,10 @@ methods: {
     openModal() {
       this.$refs.modal.open();
     }
-}
+  },
+    scrollToSection(sectionId) {
+      this.$emit('scroll-to-section', sectionId);
+  },
 };
 
 
@@ -78,10 +86,24 @@ methods: {
 <style lang="scss">
 
 div .home {
-  padding: 2em;
+  padding: 2em 2em 2em 2em;
 }
 div .blockmodalcv {
   padding: 1em;
+}
+
+div .présentation {
+  padding-left: 1em;
+}
+
+h2 {
+  text-decoration: underline;
+  width: max-content;
+  cursor: pointer;
+}
+
+.home h2:hover {
+  color: rgb(66, 66, 233);
 }
 
 .home {
@@ -93,12 +115,12 @@ div .blockmodalcv {
 
 #form {
   background-color: rgba(0, 0, 0, 0.541);
-  padding: 1em 6em 3em 6em;
+  padding: 1em 4em 3em 6em;
 }
 
 form {
   width: 400px;
-  padding: 50px;
+  padding: 2em 2em 2em 1em;
   margin-left: -3em;
   border: 1px solid #ccc;
   border-radius: 1em;
