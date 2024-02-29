@@ -102,7 +102,7 @@ footer {
 }
 
 .nav2 p:hover {
-  color: rgb(66, 66, 233);
+  color: rgb(61, 219, 69);
 }
 
 
@@ -115,9 +115,10 @@ footer {
   border-radius: 15px;
   padding: 5px;
   top: 50px;
-  left: 40px;
+  right: 50px;
   
 }
+
 
 #nav a {
   font-weight: bold;
@@ -145,21 +146,6 @@ footer {
   padding: 5px;
   width: 193px;
 }
-
-
-#socialLink {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-left: 30px;
-    gap: 20px;
-}
-
-
-#socialLink:hover {
-  color: rgb(66, 66, 233);
-}
-
 
 #logoGithub {
     width: 50px;
