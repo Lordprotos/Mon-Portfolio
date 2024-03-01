@@ -39,25 +39,12 @@ export default {
 
 <style lang="scss">
 
+//style App.vue --------------------
 #app {
   background: linear-gradient(to left, rgb(54, 64, 153), rgb(46, 100, 172), rgb(167, 58, 58),  rgb(46, 100, 172), rgb(54, 64, 153));
   animation: gradientAnimation 30s infinite alternate; 
   background-size: 600% 600%;
   color: white;
-}
-
-div #app{
-  padding: 2em;
-}
-
-footer {
-  margin: 3em;
-
-}
-
-#header {
-  padding: 10px 7% 3% 7%;
-  margin: 10px;
 }
 
 @keyframes gradientAnimation {
@@ -69,9 +56,58 @@ footer {
   }
 }
 
+div #app{
+  padding: 2em;
+}
+
+//style header --------------------
+
+#header {
+  padding: 10px 7% 3% 7%;
+  margin: 10px;
+}
+
+
 #app main {
   font-size: 110%;
 }
+
+//style nav --------------------
+
+#nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  font-size: 180%;
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  top: 50px;
+  right: 50px;
+  
+}
+
+#nav a {
+  font-weight: bold;
+  color: #1aace6af;
+}
+
+#nav a.router-link-exact-active {
+  color: #111111;
+  text-decoration: none;
+}
+
+#nav router-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+#nav span {
+  margin-left: 13px;
+}
+
+//style nav2 --------------------
 
 .title_nav {
   display: flex;
@@ -105,40 +141,7 @@ footer {
   color: rgb(61, 219, 69);
 }
 
-
-#nav {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  font-size: 180%;
-  border: 3px solid black;
-  border-radius: 15px;
-  padding: 5px;
-  top: 50px;
-  right: 50px;
-  
-}
-
-
-#nav a {
-  font-weight: bold;
-  color: #1aace6af;
-}
-
-#nav a.router-link-exact-active {
-  color: #111111;
-  text-decoration: none;
-}
-
-#nav router-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-#nav span {
-  margin-left: 13px;
-}
+//style title --------------------
 
 .titre1 {
   border: 3px solid rgb(255, 255, 255);
@@ -146,6 +149,8 @@ footer {
   padding: 5px;
   width: 193px;
 }
+
+//style image --------------------
 
 #logoGithub {
     width: 50px;

@@ -1,16 +1,18 @@
 <template>
   <main>
   <div class="home">
+    <!--block prentation-->
     <h2 id="presentation">Présentation</h2>
     <div class="présentation">
       <div class="blockpresentation">
         <h3>Joseph LEVEQUE</h3>
         <p class="textpresentation">Je me présente, je suis un jeune développeur web de 23 ans passioné de jeux videos, plein d'ambition
           et à la recherche de nouvelle connaisance.<br> Je suis motivié dans ce que j'entreprend et n'abandonne
-          pas facilement, je ne suis de base pas tres sociable mais je fais en sorte que ca n'affecte pas mon travaille.<br> J' ai une attitude 
+          pas facilement, je ne suis de base pas tres sociable mais je fais en sorte que ca n'affecte pas mon travaille.<br> J'ai une attitude 
           differente lorsque que je suis concentrer sur mon travaille, je suis minutieux au possible et j'aime proposée et montré un résultat propre.
         </p>
       </div>
+      <!--block language-->
       <div class="blocklangue">
         <h3>Langues parlées</h3>
           <ul>
@@ -25,6 +27,7 @@
             <li>VueCLI : Débutant</li>
           </ul>
       </div>
+      <!--block interet-->
       <div class="blockinteret">
           <h3>Centres d'interêts</h3>
           <ul>
@@ -35,6 +38,7 @@
           </ul>
       </div>
     </div>
+    <!--block modal-->
     <div class="blockmodalcv">
       <h2 id="project">Mes projets</h2>
       <button class="modalcv" @click="openModal">
@@ -46,6 +50,7 @@
       <ModalCV ref="modal"/>
     </div>
   </div>
+  <!--block form-->
   <div id="form">
     <h2 id="contact">Contact</h2>
       <form action="/send-email" method="post">
@@ -73,14 +78,15 @@
       </form>
     </div>
     </main>
+    <!--footer-->
       <footer>
       <section id="socialLink">
-        <!--Social links with link to account and actualisation date -->
+        <!--Social links with link to account and last update-->
         <a style="color: rgb(255, 255, 255);" href="https://github.com/Lordprotos"><img id="logoGithub" src="@/assets/Images/GitHub.png" alt="Logo GitHub" /><br />GitHub</a>
         <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="@/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
         <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="@/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
       </section>
-      <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-02-29">29 février 2024</time></strong></p>
+      <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-03-01">1 mars 2024</time></strong></p>
     </footer>
   
   
@@ -110,11 +116,17 @@ methods: {
 
 <style lang="scss">
 
+//style page home --------------------
+
 div .home {
   padding: 2em 2em 2em 2em;
 }
-div .blockmodalcv {
-  padding: 1em;
+
+.home {
+  background-color: rgba(0, 0, 0, 0.541);
+  padding: 3em 6em 1em 6em;
+  display: flex;
+  flex-direction: column;
 }
 
 div .présentation {
@@ -129,19 +141,15 @@ div .présentation {
   text-align: center;
 }
 
+//style h2 --------------------
+
 h2 {
   padding: 0px 0px 0px 20px;
   text-decoration: underline;
   width: max-content;
 }
 
-
-.home {
-  background-color: rgba(0, 0, 0, 0.541);
-  padding: 3em 6em 1em 6em;
-  display: flex;
-  flex-direction: column;
-}
+//style form --------------------
 
 #form {
   background-color: rgba(0, 0, 0, 0.541);
@@ -201,6 +209,8 @@ textarea {
   border-color: white;
 }
 
+//style modal --------------------
+
 .modalcv {
   margin-left: 0;
   margin-top: 5px;
@@ -214,6 +224,10 @@ textarea {
   text-align: left;
   max-width: max-content;
   max-height: max-content;
+}
+
+div .blockmodalcv {
+  padding: 1em;
 }
 
 .blockmodalcv h2 {
@@ -232,6 +246,12 @@ textarea {
   cursor: pointer;
   background: transparent;
   border: 2px solid white;
+}
+
+//style footer --------------------
+
+footer {
+  margin: 3em;
 }
 
 #socialLink {

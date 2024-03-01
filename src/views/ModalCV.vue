@@ -5,8 +5,8 @@
         <ul>
           <h1>Mon CV</h1>
           <p>Crée le 10/11/2023</p>
-          <p>HTML5 / CSS </p>
-          <p>le repository GitHub</p>
+          <p>HTML5 / CSS 3</p>
+          <a class="link_github" href="https://github.com/Lordprotos/Mon-CV">Lien vers le repository GitHub</a>
         </ul>
         <div class="sitecv-link">
           <a :href="imageURL" target="_blank"><img class="imagesite" :src="sitecvImage" alt="sitecv"></a>
@@ -91,6 +91,15 @@ div .modal {
 .imagesite {
   width: 300px;
   height: 300px;
+}
+
+.link_github {
+  color: white;
+}
+
+.link_github:hover {
+  color: rgb(255, 255, 255) !important;
+  text-shadow: 13px 13px rgb(84, 196, 90) !important;
 }
 
 </style>
