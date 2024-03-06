@@ -2,7 +2,7 @@
   <div class="vertical-center">
     <div class="container">
       <div id="notfound" class="text-center ">
-        <h1>😮</h1>
+        <h1>😮<br>Error 404</h1>
         <h2>Oops! Page Not Be Found</h2>
         <p>Sorry but the page you are looking for does not exist.</p>
         <router-link to="/">Back to homepage</router-link>
@@ -28,5 +28,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: #f1f1f1;
+  background-image: url(../assets/Images/background404.png);
 }
+
 </style>

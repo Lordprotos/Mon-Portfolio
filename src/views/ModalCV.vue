@@ -91,6 +91,7 @@ div .modal {
 .imagesite {
   width: 300px;
   height: 300px;
+  border-radius: 30px;
 }
 
 .link_github {

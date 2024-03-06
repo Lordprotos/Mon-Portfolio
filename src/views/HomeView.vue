@@ -86,7 +86,7 @@
         <a style="color: rgb(255, 255, 255);" href="https://www.linkedin.com/in/joseph-leveque-10213329b/"><img id="logoLinkedin" src="@/assets/Images/Linkedin.png" alt="LogoLinkedin" /><br />Linkedin</a>
         <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="@/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
       </section>
-      <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-03-01">1 mars 2024</time></strong></p>
+      <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-03-06">6 mars 2024</time></strong></p>
     </footer>
   
   
@@ -246,6 +246,7 @@ div .blockmodalcv {
   cursor: pointer;
   background: transparent;
   border: 2px solid white;
+  border-radius: 30px;
 }
 
 //style footer --------------------
