@@ -53,23 +53,23 @@
   <!--block form-->
   <div id="form">
     <h2 id="contact">Contact</h2>
-      <form action="/send-email" method="post">
+      <form @submit.prevent="showAlert">
         <ul>
           <li>
             <label for="firstname">Nom : </label>
-            <input type="text" id="email" name="user_name">
+            <input type="text" id="firstname" name="user_firstname">
           </li>
           <li>
             <label for="lastname">Prénom : </label>
-            <input type="text" id="email" name="user_name">
+            <input type="text" id="lastname" name="user_lastname">
           </li>
           <li>
             <label for="email">Email : </label>
-            <input type="email" id="email" name="user_email">
+            <input type="email" id="user_email" name="user_email">
           </li>
           <li>
             <label for="">Laisser un message : </label>
-            <textarea name="message" id="msg" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
           </li>
         </ul>
         <div class="button-container">
@@ -109,9 +109,25 @@ methods: {
     scrollToSection(sectionId) {
       this.$emit('scroll-to-section', sectionId);
   },
-};
+  showAlert() {
+    console.log('La méthode showAlert est appelée !');
 
+    // Récupération des données du formulaire
+    const firstName = document.getElementById('firstname').value;
+    const lastName = document.getElementById('lastname').value;
+    const email = document.getElementById('user_email').value;
+    const message = document.getElementById('message').value;
 
+    console.log('Nom :', firstName);
+    console.log('Prénom :', lastName);
+    console.log('Email :', email);
+    console.log('Message :', message);
+
+    // Affichage de l'alerte
+    console.log('Affichage de l\'alerte !');
+    alert('Le mail a été envoyé !');
+  },
+}
 </script>
 
 <style lang="scss">
