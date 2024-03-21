@@ -1,4 +1,4 @@
-<template>
+<template lang="fr">
   <main>
   <div class="home">
     <!--block prentation-->
@@ -47,7 +47,7 @@
           <img class="imagesitecv" src="../assets/Images/sitecv.png"  alt="Image site CV">
         </div>
       </button>
-      <ModalCV ref="modal"/>
+      <ModalCV ref="modal"></ModalCV>
     </div>
   </div>
   <!--block form-->
@@ -87,9 +87,7 @@
         <a style="color: rgb(255, 255, 255);" href="https://twitter.com/protos241"><img id="logoTwitter" src="@/assets/Images/Twitter.png" alt="Logo Twitter"><br>Twitter</a>
       </section>
       <p id="time"><strong>Cette page à été actualisée le <time datetime="2024-03-06">6 mars 2024</time></strong></p>
-    </footer>
-  
-  
+    </footer> 
 </template>
 
 <script>
@@ -97,46 +95,39 @@
 import ModalCV from './ModalCV.vue'
 
 export default {
-  name: 'HomeView',
-  components: {
-    ModalCV 
+name: 'HomeView',
+components: {
+ModalCV 
 },
 methods: {
-    openModal() {
-      this.$refs.modal.open();
-    }
-  },
-    scrollToSection(sectionId) {
-      this.$emit('scroll-to-section', sectionId);
-  },
-  showAlert() {
-    console.log('La méthode showAlert est appelée !');
+openModal() {
+this.$refs.modal.open();
+},
+scrollToSection(sectionId) {
+this.$emit('scroll-to-section', sectionId);
+},
+showAlert() {
+console.log('La méthode showAlert est appelée !');
+const firstName = document.getElementById('firstname').value;
+const lastName = document.getElementById('lastname').value;
+const email = document.getElementById('user_email').value;
+const message = document.getElementById('message').value;
 
-    // Récupération des données du formulaire
-    const firstName = document.getElementById('firstname').value;
-    const lastName = document.getElementById('lastname').value;
-    const email = document.getElementById('user_email').value;
-    const message = document.getElementById('message').value;
+console.log('Nom :', firstName);
+console.log('Prénom :', lastName);
+console.log('Email :', email);
+console.log('Message :', message);
 
-    console.log('Nom :', firstName);
-    console.log('Prénom :', lastName);
-    console.log('Email :', email);
-    console.log('Message :', message);
-
-    // Affichage de l'alerte
-    console.log('Affichage de l\'alerte !');
-    alert('Le mail a été envoyé !');
-  },
+console.log('Affichage de l\'alerte !');
+alert('Le mail a été envoyé !');
 }
+}
+};
 </script>
 
 <style lang="scss">
 
-//style page home --------------------
-
-div .home {
-  padding: 2em 2em 2em 2em;
-}
+/*style page home --------------------*/
 
 .home {
   background-color: rgba(0, 0, 0, 0.541);
@@ -157,15 +148,15 @@ div .présentation {
   text-align: center;
 }
 
-//style h2 --------------------
+/*style h2 --------------------*/
 
 h2 {
-  padding: 0px 0px 0px 20px;
+  padding: 0 0 0 20px;
   text-decoration: underline;
   width: max-content;
 }
 
-//style form --------------------
+/*style form --------------------*/
 
 #form {
   background-color: rgba(0, 0, 0, 0.541);
@@ -225,7 +216,7 @@ textarea {
   border-color: white;
 }
 
-//style modal --------------------
+/*style modal --------------------*/
 
 .modalcv {
   margin-left: 0;
@@ -265,7 +256,7 @@ div .blockmodalcv {
   border-radius: 30px;
 }
 
-//style footer --------------------
+/*style footer --------------------*/
 
 footer {
   margin: 3em;

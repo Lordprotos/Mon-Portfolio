@@ -1,4 +1,4 @@
-<template>
+<template lang="fr">
   <div class="vertical-center">
     <div class="container">
       <div id="notfound" class="text-center ">

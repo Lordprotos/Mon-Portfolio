@@ -1,4 +1,4 @@
-<template>
+<template lang="fr">
   <div class="modal" v-if="isVisible" @click.self="closeModal">
     <div class="modal-content" @click.stop>
       <span class="close" @click="close">&#10005;</span>

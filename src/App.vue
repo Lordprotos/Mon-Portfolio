@@ -1,4 +1,4 @@
-<template>
+<template lang="fr">
 <div id="app">
   <header id="header">
     <nav id="nav">
@@ -14,7 +14,7 @@
     </div>
   </header>
   <main>
-    <router-view/>
+    <router-view></router-view>
   </main>
 </div>
 </template>
@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss">
 
-//style App.vue --------------------
+/*style App --------------------*/
 #app {
   background: linear-gradient(to left, rgb(54, 64, 153), rgb(46, 100, 172), rgb(167, 58, 58),  rgb(46, 100, 172), rgb(54, 64, 153));
   animation: gradientAnimation 30s infinite alternate; 
@@ -60,7 +60,7 @@ div #app{
   padding: 2em;
 }
 
-//style header --------------------
+/*style header --------------------*/
 
 #header {
   padding: 10px 7% 3% 7%;
@@ -72,7 +72,7 @@ div #app{
   font-size: 110%;
 }
 
-//style nav --------------------
+/*style nav --------------------*/
 
 #nav {
   position: fixed;
@@ -107,7 +107,7 @@ div #app{
   margin-left: 13px;
 }
 
-//style nav2 --------------------
+/*style nav2 --------------------*/
 
 .title_nav {
   display: flex;
@@ -141,7 +141,7 @@ div #app{
   color: rgb(61, 219, 69);
 }
 
-//style title --------------------
+/*style title --------------------*/
 
 .titre1 {
   border: 3px solid rgb(255, 255, 255);
@@ -150,7 +150,7 @@ div #app{
   width: 193px;
 }
 
-//style image --------------------
+/*style image --------------------*/
 
 #logoGithub {
     width: 50px;
